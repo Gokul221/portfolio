@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://gokul-bhoi-portfolio.netlify.app/sitemap.xml
