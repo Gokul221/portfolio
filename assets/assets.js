@@ -115,6 +115,7 @@ export const workData = [
         title: 'Portfolio',
         description: 'NextJs',
         bgImage: '/portfolio_ss.png',
+        link: 'https://gokul-bhoi-portfolio.netlify.app/'
     },
     {
         title: 'Challenges',
