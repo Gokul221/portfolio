@@ -59,7 +59,7 @@ const Footer = ({ isDarkMode }) => {
           <li className="hover:scale-105 lg:hover:text-white duration-500">
             <a
               target="_blank"
-              href="https://www.hackerrank.com/profile/priteshbhoi69"
+              href="https://www.hackerrank.com/profile/gokulbhoi"
             >
               HackerRank
             </a>
