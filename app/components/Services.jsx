@@ -18,7 +18,7 @@ const Services = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
-        What I offer
+        What I plan to offer
       </motion.h4>
       <motion.h2
         initial={{ y: -20, opacity: 0 }}

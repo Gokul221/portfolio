@@ -24,7 +24,7 @@ const Footer = ({ isDarkMode }) => {
         <Image
           src={isDarkMode ? assets.logo_gokul_dark : assets.logo_gokul_white}
           alt="logo"
-          className="w-36 flex lg:ml-[41.2rem] ml-48 mx-auto mb-2"
+          className="w-36 flex mx-auto mb-2"
         />
         <div className="flex w-max items-center gap-2 mx-auto">
           <Image
@@ -35,9 +35,9 @@ const Footer = ({ isDarkMode }) => {
           gokulb0702@gmail.com
         </div>
       </div>
-      <div className="relative z-10 text-center sm:flex items-center justify-between border-gray-400 mx-[10%] mt-12 py-6">
-        <p>&copy; 2025 Gokul Bhoi. All rights reserved.</p>
-        <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+      <div className="relative z-10 text-center flex flex-col sm:flex-row sm-items-center sm-justify-between md:flex-col lg:flex-row lg:items-center lg:justify-between border-gray-400 mx-[10%] mt-12 py-6">
+        <p className="sm:order-1">&copy; 2025 Gokul Bhoi. All rights reserved.</p>
+        <ul className="flex items-center gap-10 justify-center mt-4 sm:order-2">
           <li className="hover:scale-105 lg:hover:text-white duration-500">
             <a target="_blank" href="https://www.github.com/Gokul221">
               GitHub
