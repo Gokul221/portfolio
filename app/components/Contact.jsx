@@ -13,7 +13,7 @@ const Contact = () => {
     const formData = new FormData(event.target);
 
     formData.append("access_key", "e34f429a-17da-433e-930a-2446537529c2");
- 
+
     const myPromise = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
@@ -51,7 +51,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
+      className="w-full px-5 sm:px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -86,7 +86,7 @@ const Contact = () => {
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto"
       >
-        <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 gap-6 mt-10 mb-8">
           <motion.input
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}

@@ -16,7 +16,7 @@ const Footer = ({ isDarkMode }) => {
           src="/l3.svg"
           alt="Background"
           fill
-          style={{ objectFit: "cover", objectPosition: "bottom"}}
+          style={{ objectFit: "cover", objectPosition: "bottom" }}
           className="opacity-50 dark:opacity-60"
         />
       </motion.div>
@@ -37,7 +37,7 @@ const Footer = ({ isDarkMode }) => {
       </div>
       <div className="relative z-10 text-center flex flex-col sm:flex-row sm-items-center sm-justify-between md:flex-col lg:flex-row lg:items-center lg:justify-between border-gray-400 mx-[10%] mt-12 py-6">
         <p className="sm:order-1">&copy; 2025 Gokul Bhoi. All rights reserved.</p>
-        <ul className="flex items-center gap-10 justify-center mt-4 sm:order-2">
+        <ul className="flex flex-col sm:flex-row items-center gap-2 sm:gap-10 justify-center mt-4 sm:order-2">
           <li className="hover:scale-105 lg:hover:text-white duration-500">
             <a target="_blank" href="https://www.github.com/Gokul221">
               GitHub

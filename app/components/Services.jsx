@@ -10,7 +10,7 @@ const Services = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="services"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-5 sm:px-[12%] py-10 scroll-mt-20"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -41,7 +41,7 @@ const Services = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid grid-cols-auto gap-6 my-10"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10"
       >
         {serviceData.map(({ icon, title, description, link }, index) => (
           <motion.div

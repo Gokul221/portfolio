@@ -41,7 +41,7 @@ const Header = () => {
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="relative z-10 text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="relative z-10 text-2xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
         A Frontend Developer
       </motion.h1>
