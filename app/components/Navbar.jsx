@@ -4,23 +4,55 @@ import { assets } from "@/assets/assets";
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
+  const [activeSection, setActiveSection] = useState("top"); // Track active section
   const sideMenuRef = useRef();
+
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)"; // shift side-bar to left
+    sideMenuRef.current.style.transform = "translateX(-16rem)";
   };
   const closeMenu = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
+      // Navbar background change
       if (scrollY > 50) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
       }
-    });
+
+      // Active link highlighting
+      if (scrollY === 0) {
+        setActiveSection("top");
+        return;
+      }
+
+      const sections = ["top", "about", "services", "work", "contact"];
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Check if section is primarily in view (top is near the top of viewport)
+          // Adjust 150px offset for better timing
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(section);
+            break; // Found the active one, stop checking
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Helper to determine link styling
+  const getLinkClass = (section) =>
+    `font-Outfit ${activeSection === section ? "text-rose-600 dark:text-rose-400 font-semibold" : ""}`;
+
 
   return (
     <>
@@ -28,11 +60,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <Image src={assets.header_bg_color} alt="header" className="w-full" />
       </div>
       <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
-          isScroll
-            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-opacity-50 dark:bg-darkTheme dark:shadow-white/20"
-            : ""
-        }`}
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll
+          ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme/50 dark:shadow-white/20"
+          : ""
+          }`}
       >
         <a href="#top">
           <Image
@@ -42,34 +73,33 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           />
         </a>
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            isScroll
-              ? ""
-              : "bg-white shadow-lg bg-opacity-50 dark:bg-opacity-50 dark:bg-[#282774]"
-          }`}
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll
+            ? ""
+            : "bg-white shadow-lg bg-opacity-50 dark:bg-opacity-50 dark:bg-[#282774]"
+            }`}
         >
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#top">
+            <a className={getLinkClass("top")} href="#top">
               Home
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#about">
+            <a className={getLinkClass("about")} href="#about">
               About me
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#services">
+            <a className={getLinkClass("services")} href="#services">
               Services
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#work">
+            <a className={getLinkClass("work")} href="#work">
               My work
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#contact">
+            <a className={getLinkClass("contact")} href="#contact">
               Contact me
             </a>
           </li>
@@ -117,27 +147,27 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             />
           </div>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#top" onClick={closeMenu}>
+            <a className={getLinkClass("top")} href="#top" onClick={closeMenu}>
               Home
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#about" onClick={closeMenu}>
+            <a className={getLinkClass("about")} href="#about" onClick={closeMenu}>
               About me
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#services" onClick={closeMenu}>
+            <a className={getLinkClass("services")} href="#services" onClick={closeMenu}>
               Services
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#work" onClick={closeMenu}>
+            <a className={getLinkClass("work")} href="#work" onClick={closeMenu}>
               My work
             </a>
           </li>
           <li className="hover:scale-105 duration-300">
-            <a className="font-Ovo" href="#contact" onClick={closeMenu}>
+            <a className={getLinkClass("contact")} href="#contact" onClick={closeMenu}>
               Contact me
             </a>
           </li>

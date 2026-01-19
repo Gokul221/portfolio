@@ -5,21 +5,22 @@ import { assets } from "@/assets/assets";
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-      <motion.div
+    <div id="top" className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+      {/* <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "keyframes", stiffness: 100 }}
         className="absolute md:h-[100vh] inset-0 z-0 dark:opacity-60"
-      >
-        <Image
-          src="/mainL.png"
-          alt="Background"
-          fill
-          style={{ objectFit: "cover" }}
-          className="hidden dark:block"
-        />
-      </motion.div>
+      > */}
+      <Image
+        scale={1}
+        src="/mainL.png"
+        alt="Background"
+        fill
+        style={{ objectFit: "cover" }}
+        className="hidden dark:block"
+      />
+      {/* </motion.div> */}
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -41,7 +42,7 @@ const Header = () => {
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="relative z-10 text-2xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="relative z-10 text-2xl sm:text-6xl lg:text-[66px] font-Ovo tracking-wide bg-gradient-to-r from-rose-600 to-indigo-600 bg-clip-text text-transparent"
       >
         A Frontend Developer
       </motion.h1>
@@ -49,7 +50,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
-        className="relative z-10 max-w-2xl mx-auto font-Ovo mt-4"
+        className="relative z-10 max-w-2xl mx-auto mt-4"
       >
         Bridging design and development to craft delightful web experiences—one
         component at a time!

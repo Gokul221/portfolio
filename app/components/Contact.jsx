@@ -73,7 +73,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
         I'd love to hear from you! If you have any questions, comments, or
         feedbacks, please use the form below
@@ -95,7 +95,7 @@ const Contact = () => {
             placeholder="Enter your name"
             name="name"
             required
-            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 focus:ring-2 focus:ring-rose-500 transition-all"
           />
           <motion.input
             initial={{ x: 50, opacity: 0 }}
@@ -105,7 +105,7 @@ const Contact = () => {
             placeholder="Enter your email"
             name="email"
             required
-            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 focus:ring-2 focus:ring-rose-500 transition-all"
           />
         </div>
         <motion.textarea
@@ -116,7 +116,7 @@ const Contact = () => {
           placeholder="Enter your message"
           name="message"
           required
-          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
+          className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90 focus:ring-2 focus:ring-rose-500 transition-all"
         ></motion.textarea>
         <motion.button
           whileHover={{ scale: 1.05 }}

@@ -94,28 +94,34 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Movies Bay',
-        description: 'Web App',
-        bgImage: '/movie_website.png',
-        link: 'https://famous-fenglisu-c22ca9.netlify.app/'
-    },
-    {
-        title: 'App Landing Page',
-        description: 'Responsive App',
-        bgImage: '/landing_page_ss.png',
-        link: 'https://saas-xora-page.netlify.app/'
-    },
-    {
-        title: 'Chat Web App',
-        description: 'Websockets',
-        bgImage: '/chat-app.jpg',
-        link: 'https://github.com/Gokul221/websocket-chat-app'
+        title: 'Mindful Haven',
+        description: 'Yoga Website',
+        bgImage: '/homepage.png',
+        link: 'https://mindfulhaven-9w3gnqsrw-gokuls-projects-963b05d4.vercel.app/'
     },
     {
         title: 'Portfolio',
         description: 'NextJs',
         bgImage: '/portfolio_ss.png',
         link: 'https://gokul-bhoi-portfolio.netlify.app/'
+    },
+    {
+        title: 'Landing Page',
+        description: 'Responsive App',
+        bgImage: '/landing_page_ss.png',
+        link: 'https://saas-xora-page.netlify.app/'
+    },
+    {
+        title: 'Movies Bay',
+        description: 'Web App',
+        bgImage: '/movie_website.png',
+        link: 'https://famous-fenglisu-c22ca9.netlify.app/'
+    },
+    {
+        title: 'Chat Web App',
+        description: 'Websockets',
+        bgImage: '/chat-app.jpg',
+        link: 'https://github.com/Gokul221/websocket-chat-app'
     },
     {
         title: 'Challenges',

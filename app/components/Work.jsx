@@ -34,7 +34,7 @@ const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
         Welcome to my Web Development Portfolio! Focusing on building responsive
         and scalable code that don't just work but feel amazing.
@@ -44,7 +44,7 @@ const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-10 gap-5 dark:text-black"
+        className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-10 gap-10 dark:text-black"
       >
         {workData
           .slice(0, showMore ? workData.length : 4)
@@ -53,7 +53,7 @@ const Work = ({ isDarkMode }) => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               key={index}
-              className="border border-gray-400 duration-200 hover:shadow-black dark:hover:shadow-white aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+              className="border border-gray-400 duration-200 hover:shadow-black dark:hover:shadow-white dark:hover:shadow-[0_0_12px_rgba(255,255,255,0.1)] hover:-translate-y-2 aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
               style={{ backgroundImage: `url(${project.bgImage})` }}
             >
               <a href={project.link} target="_blank">
