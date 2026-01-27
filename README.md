@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is a portfolio website developed using Next.js and Tailwind.
+This is my portfolio website developed using Next.js and Tailwind CSS.
 
 ## Table of contents
 
@@ -16,17 +16,15 @@ This is a portfolio website developed using Next.js and Tailwind.
 
 ### Screenshots
 
-1.
-![](./ss_header.png)
+1. Homepage
+![](./public/portfolio_homepage.png)
 
-2.
-![](./ss_header_dark.png)
+2. Homepage_dark_mode
+![](./public/homepage_dark.png)
 
-3.
-![](./ss_random.png)
+3. Projects
+![](./public/projects.png)
 
-4.
-![](./ss_random_dark.png)
 
 ### Links
 
@@ -38,12 +36,8 @@ This is a portfolio website developed using Next.js and Tailwind.
 
 - Next.js
 - Tailwind CSS
-- Mobile-first workflow
-- Static files and assets
 
 ### Continued development
-
-- The smaller screens version need to be work upon at some places and fix irregularities.
 
 - Thinking on implementing more animations and effects to make the website more dynamic and engaging.
 
