@@ -44,7 +44,7 @@ const Work = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-10 gap-10 dark:text-black"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-10 gap-10 dark:text-black"
       >
         {workData
           .slice(0, showMore ? workData.length : 4)

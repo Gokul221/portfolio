@@ -6,12 +6,6 @@ import { assets } from "@/assets/assets";
 const Header = () => {
   return (
     <div id="top" className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-      {/* <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 0.8, type: "keyframes", stiffness: 100 }}
-        className="absolute md:h-[100vh] inset-0 z-0 dark:opacity-60"
-      > */}
       <Image
         scale={1}
         src="/mainL.png"
@@ -20,7 +14,6 @@ const Header = () => {
         style={{ objectFit: "cover" }}
         className="hidden dark:block"
       />
-      {/* </motion.div> */}
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
